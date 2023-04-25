@@ -45,8 +45,11 @@ MovieHashTable::~MovieHashTable() {
 int MovieHashTable::hash(string title) {
     // TODO
     int hash_value = 0;
+    string key = "guxi3064"; // replace with your identikey
+    int key_index = 0;
     for (char c : title) {
-        hash_value = hash_value * 31 + c;
+        hash_value += (c * key[key_index]);
+        key_index = (key_index + 1) % key.length();
     }
     return abs(hash_value) % table_size;
 
