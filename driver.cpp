@@ -22,20 +22,25 @@ int main(int argc, char* argv[]) {
         cout << "Usage: ./<program name> <csv file> <hashTable size> <skipList size>" << endl;
         return -1;
     }
+
     int Table_Size = atoi(argv[2]);
     int Skip_Size = atoi(argv[3]);
     MovieHashTable movieTable(Table_Size);
     DirectorSkipList directList(Skip_Size, DEFAULT_LEVELS);
     readMovieCSV(argv[1], movieTable, directList);
-    directList.prettyPrint();
+    //directList.prettyPrint();
+    int coll = movieTable.getCollisions();
+    cout << "Collisions: " << coll << endl;
+
 
     string line;
     int Choice = 0;
 
     while(Choice != 5)
     {
-        cout << "Please select an option: " << endl;;
+        
         display_menu();
+        cout << "Enter an Option: ";
         cin >> Choice;
 
         switch(Choice)
@@ -66,19 +71,56 @@ int main(int argc, char* argv[]) {
                    else
                     cout << "The director of " << movie->title << " is " << direct->director << endl;
                 }
+                cout << endl;
                 break;
             }
             case 2:
             {
+                MovieNode * movie;
+                DirectorSLNode * direct;
+                int num_movies = 0;
+                string input;
+                cout << "Enter director name: "; 
+                getline(cin.ignore(), input);
+                direct = directList.search(input);
+                cout << input << " directed " << direct->movies.size() << " movies." << endl;
+                cout << endl;
                 break;
             }
             case 3:
             {
-                cout << "Enter a movie name:";
+                MovieNode * movie;
+                DirectorSLNode * direct;
+                string input;
+                cout << "Enter a movie name: ";
+                getline(cin.ignore(), input);
+                movie = movieTable.search(input);
+                cout << "Summary: " << movie->title << " is a " << movie -> year;
+                cout << " ( " << movie -> genre << " )" << " film featuring " << movie -> actors << "." << endl;
+                cout << "Plot: " << movie->description << endl;
                 break;
             }
             case 4:
             {
+                MovieNode * movie;
+                DirectorSLNode * direct;
+                int num_movies = 0;
+                string input;
+
+                cout << "Enter director name: "; 
+                getline(cin.ignore(), input);
+                direct = directList.search(input);
+                cout << input << " directed the following movies:" << endl;
+                if(direct == NULL)
+                {
+                    cout << "Director Not Found" << endl;
+                    break;
+                }
+                for(int i = 0; i < (direct->movies.size()); i++)
+                {
+                    cout << i << ": " << direct->movies[i] -> title << endl;
+                }
+                cout << endl;
                 break;
             }
             default:

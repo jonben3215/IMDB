@@ -1,2 +1,3 @@
 g++ -g -std=c++17 DirectorSkipList.cpp MovieHashTable.cpp driver.cpp -o movie 
 ./movie IMDB-small.csv 10 10
+./movie IMDB-Movie-Data.csv 1000 1000
