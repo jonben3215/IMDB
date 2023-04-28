@@ -126,6 +126,7 @@ int main(int argc, char* argv[]) {
             default:
             {
                 movieTable.~MovieHashTable();
+                directList.~DirectorSkipList();
                 break;
             }
         }

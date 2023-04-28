@@ -35,6 +35,7 @@ DirectorSkipList::~DirectorSkipList() {
         curr = curr->next[0];
         delete prev;
     }
+    head = NULL;
 }
 
 void DirectorSkipList::insert(string director, MovieNode* _movie) {
