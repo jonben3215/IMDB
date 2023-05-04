@@ -28,7 +28,7 @@ int main(int argc, char* argv[]) {
     MovieHashTable movieTable(Table_Size);
     DirectorSkipList directList(Skip_Size, DEFAULT_LEVELS);
     readMovieCSV(argv[1], movieTable, directList);
-    //directList.prettyPrint();
+   // directList.prettyPrint();
     int coll = movieTable.getCollisions();
     cout << "Collisions: " << coll << endl;
 

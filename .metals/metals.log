@@ -1,0 +1,154 @@
+2023.04.30 21:31:19 INFO  Started: Metals version 0.11.12 in workspace '/Users/xiang/Desktop/CSCI/CSCI2270/final-project-jonben3215' for client Visual Studio Code 1.77.3.
+Apr 30, 2023 9:31:19 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+Apr 30, 2023 9:31:19 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+Apr 30, 2023 9:31:19 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+Apr 30, 2023 9:31:20 PM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:/Users/xiang/Desktop/CSCI/CSCI2270/final-project-jonben3215/.metals/metals (H2 2.1)
+Apr 30, 2023 9:31:20 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+Apr 30, 2023 9:31:20 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.008s)
+Apr 30, 2023 9:31:20 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+Apr 30, 2023 9:31:20 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+Apr 30, 2023 9:31:20 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - Create tables"
+Apr 30, 2023 9:31:20 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - Server discovery"
+Apr 30, 2023 9:31:20 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+Apr 30, 2023 9:31:20 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+Apr 30, 2023 9:31:20 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.029s)
+2023.04.30 21:31:20 INFO  time: initialize in 0.35s
+2023.04.30 21:31:20 INFO  Attempting to connect to the build server...
+2023.04.30 21:31:20 INFO  Running BSP server List(/Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/bin/java, -Xms100m, -Xmx100m, -classpath, /Users/xiang/Library/Caches/Coursier/arc/https/github.com/sbt/sbt/releases/download/v1.8.2/sbt-1.8.2.zip/sbt/bin/sbt-launch.jar, -Dsbt.script=/Users/xiang/Library/Caches/Coursier/arc/https/github.com/sbt/sbt/releases/download/v1.8.2/sbt-1.8.2.zip/sbt/bin/sbt, xsbt.boot.Boot, -bsp)
+2023.04.30 21:31:21 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/xiang/Desktop/CSCI/CSCI2270/final-project-jonben3215/.metals/bsp.trace.json or /Users/xiang/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.04.30 21:31:21 WARN  no build target for: /Users/xiang/Desktop/CSCI/CSCI2270/final-project-jonben3215/project/metals.sbt
+2023.04.30 21:31:21 WARN  no build target for: /Users/xiang/Desktop/CSCI/CSCI2270/final-project-jonben3215/project/project/metals.sbt
+2023.04.30 21:31:22 INFO  Processing workspace/reload
+2023.04.30 21:31:24 INFO  Updating 
+2023.04.30 21:31:24 INFO  Resolved  dependencies
+2023.04.30 21:31:24 INFO  no build target found for /Users/xiang/Desktop/CSCI/CSCI2270/final-project-jonben3215/project/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.2.2
+2023.04.30 21:31:24 INFO  Fetching artifacts of 
+2023.04.30 21:31:24 INFO  Fetched artifacts of 
+2023.04.30 21:31:24 INFO  compiling final-project-jonben3215-build-build
+2023.04.30 21:31:25 INFO  Updating 
+2023.04.30 21:31:25 INFO  Resolved  dependencies
+2023.04.30 21:31:25 INFO  Updating 
+2023.04.30 21:31:25 INFO  Resolved  dependencies
+2023.04.30 21:31:25 INFO  Fetching artifacts of 
+2023.04.30 21:31:27 INFO  Fetched artifacts of 
+2023.04.30 21:31:27 INFO  compiling final-project-jonben3215-build
+2023.04.30 21:31:27 INFO  time: Connected to build server in 6.76s
+2023.04.30 21:31:27 INFO  Connected to Build server: sbt v1.8.2
+2023.04.30 21:31:27 INFO  Processing workspace/buildTargets
+2023.04.30 21:31:27 INFO  Processing buildTarget/scalacOptions
+2023.04.30 21:31:27 INFO  Processing buildTarget/sources
+2023.04.30 21:31:27 INFO  Processing buildTarget/dependencySources
+2023.04.30 21:31:27 INFO  Fetching artifacts of 
+2023.04.30 21:31:27 INFO  Fetched artifacts of 
+2023.04.30 21:31:27 INFO  time: Imported build in 0.26s
+2023.04.30 21:31:31 INFO  time: indexed workspace in 3.17s
+2023.04.30 21:31:31 INFO  Processing buildTarget/scalaMainClasses
+2023.04.30 21:31:31 INFO  compiling final-project-jonben3215
+2023.04.30 21:31:32 INFO  time: compiled final-project-jonben3215 in 0.97s
+2023.04.30 21:31:32 INFO  compiling final-project-jonben3215-test
+2023.04.30 21:31:32 INFO  time: compiled final-project-jonben3215-test in 318μs
+2023.04.30 21:31:32 INFO  Processing buildTarget/scalaTestClasses
+2023.04.30 21:31:32 INFO  compiling final-project-jonben3215
+2023.04.30 21:31:32 INFO  time: compiled final-project-jonben3215 in 388μs
+2023.04.30 21:31:32 INFO  compiling final-project-jonben3215-test
+2023.04.30 21:31:32 INFO  time: compiled final-project-jonben3215-test in 203μs
+2023.04.30 21:31:32 INFO  Processing buildTarget/jvmRunEnvironment
+2023.04.30 21:31:32 INFO  compiling final-project-jonben3215
+2023.04.30 21:31:32 INFO  time: compiled final-project-jonben3215 in 423μs
+2023.04.30 21:31:32 INFO  compiling final-project-jonben3215-test
+2023.04.30 21:31:32 INFO  time: compiled final-project-jonben3215-test in 218μs
+2023.04.30 21:32:25 INFO  Shutting down server
+2023.04.30 21:32:25 INFO  shutting down Metals
+2023.04.30 21:32:25 INFO  Shut down connection with build server.
+2023.04.30 21:32:25 INFO  Exiting server
+2023.04.30 23:52:01 INFO  Started: Metals version 0.11.12 in workspace '/Users/xiang/Desktop/CSCI/CSCI2270/final-project-jonben3215' for client Visual Studio Code 1.77.3.
+Apr 30, 2023 11:52:01 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+Apr 30, 2023 11:52:01 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+Apr 30, 2023 11:52:01 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+Apr 30, 2023 11:52:02 PM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:/Users/xiang/Desktop/CSCI/CSCI2270/final-project-jonben3215/.metals/metals (H2 2.1)
+Apr 30, 2023 11:52:02 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.017s)
+Apr 30, 2023 11:52:02 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+Apr 30, 2023 11:52:02 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.04.30 23:52:02 INFO  time: initialize in 0.68s
+2023.04.30 23:52:03 WARN  Build server is not auto-connectable.
+2023.05.03 13:57:58 INFO  Started: Metals version 0.11.12 in workspace 'C:\Users\benxi\OneDrive\Desktop\final-project-jonben3215' for client Visual Studio Code 1.77.3.
+May 03, 2023 1:57:58 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+May 03, 2023 1:57:58 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+May 03, 2023 1:57:58 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+May 03, 2023 1:58:03 PM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:C:\Users\benxi\OneDrive\Desktop\final-project-jonben3215\.metals\metals (H2 2.1)
+May 03, 2023 1:58:03 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.021s)
+May 03, 2023 1:58:03 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+May 03, 2023 1:58:03 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.05.03 13:58:03 INFO  time: initialize in 4.67s
+2023.05.03 13:58:03 WARN  Build server is not auto-connectable.
+2023.05.03 14:02:01 INFO  Shutting down server
+2023.05.03 14:02:01 INFO  shutting down Metals
+2023.05.03 14:02:01 INFO  Exiting server
+2023.05.03 18:34:37 INFO  Started: Metals version 0.11.12 in workspace 'C:\Users\benxi\OneDrive\Desktop\final-project-jonben3215' for client Visual Studio Code 1.77.3.
+May 03, 2023 6:34:37 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+May 03, 2023 6:34:37 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+May 03, 2023 6:34:37 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+May 03, 2023 6:34:38 PM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:C:\Users\benxi\OneDrive\Desktop\final-project-jonben3215\.metals\metals (H2 2.1)
+May 03, 2023 6:34:38 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.022s)
+May 03, 2023 6:34:38 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+May 03, 2023 6:34:38 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.05.03 18:34:38 INFO  time: initialize in 0.67s
+2023.05.03 18:34:38 WARN  Build server is not auto-connectable.
+2023.05.03 18:35:19 INFO  Shutting down server
+2023.05.03 18:35:19 INFO  shutting down Metals
+2023.05.03 18:35:19 INFO  Exiting server
+2023.05.03 18:35:28 INFO  Started: Metals version 0.11.12 in workspace 'C:\Users\benxi\OneDrive\Desktop\final-project-jonben3215' for client Visual Studio Code 1.78.0.
+May 03, 2023 6:35:28 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+May 03, 2023 6:35:28 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+May 03, 2023 6:35:28 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+May 03, 2023 6:35:28 PM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:C:\Users\benxi\OneDrive\Desktop\final-project-jonben3215\.metals\metals (H2 2.1)
+May 03, 2023 6:35:28 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.020s)
+May 03, 2023 6:35:28 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+May 03, 2023 6:35:28 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.05.03 18:35:28 INFO  time: initialize in 0.53s
+2023.05.03 18:35:28 WARN  Build server is not auto-connectable.
+2023.05.03 18:35:29 INFO  skipping build import with status 'Dismissed'
+2023.05.03 18:35:36 INFO  Shutting down server
+2023.05.03 18:35:36 INFO  shutting down Metals
+2023.05.03 18:35:36 INFO  Exiting server

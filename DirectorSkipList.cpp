@@ -57,7 +57,7 @@ void DirectorSkipList::insert(string director, MovieNode* _movie) {
 
     // If the director already exists in the list, add the movie to the existing node
     if (curr != nullptr && curr->director == director) {
-        curr->movies.push_back(_movie);
+         curr->addMovie(_movie);
     } else {
         // If the director doesn't exist, create a new node and insert it into the skip list
         int n_levels = 1;
@@ -66,7 +66,7 @@ void DirectorSkipList::insert(string director, MovieNode* _movie) {
             n_levels++;
         }
         DirectorSLNode* new_node = new DirectorSLNode(director, n_levels);
-        new_node->movies.push_back(_movie);
+        new_node->addMovie(_movie);
 
         // Link the new node to the skip list at each level
         for (int i = 0; i < n_levels; i++) {
@@ -75,12 +75,12 @@ void DirectorSkipList::insert(string director, MovieNode* _movie) {
         }
 
         // If the new node has more levels than any existing node, update the head nodes accordingly
-        if (n_levels > levels) {
-            for (int i = levels; i < n_levels; i++) {
-                head->next[i] = new_node;
-            }
-            levels = n_levels;
-        }
+        // if (n_levels > levels) {
+        //     for (int i = levels; i < n_levels; i++) {
+        //         head->next[i] = new_node;
+        //     }
+        //     levels = n_levels;
+        // }
         size++; // Increment the size of the skip list
     }
 }
@@ -88,17 +88,25 @@ void DirectorSkipList::insert(string director, MovieNode* _movie) {
 
 
 // Searches for a node in the skip list with the specified director
-DirectorSLNode *DirectorSkipList::search(string director) {
-    // TODO
-    DirectorSLNode * curr = head;
-    while(curr != NULL)
-    {
-        if(curr -> director == director)
-            return curr;
-        curr = curr ->next[0];
+DirectorSLNode* DirectorSkipList::search(string director) {
+    DirectorSLNode* curr = head;
+    // Traverse down the levels starting at the top level
+    for (int i = levels - 1; i >= 0; i--) {
+        // While loop to find the correct position in the current level
+        while (curr->next[i] != nullptr && curr->next[i]->director < director) {
+            curr = curr->next[i]; // Move to the next node in this level
+        }
     }
-    return NULL;
+    // Move to the lowest level
+    curr = curr->next[0];
+    // If the director exists in the skip list, return the node
+    if (curr != nullptr && curr->director == director) {
+        return curr;
+    } else {
+        return nullptr;
+    }
 }
+
 
 // Pretty-prints the skip list
 void DirectorSkipList::prettyPrint() {
@@ -126,7 +134,8 @@ void DirectorSkipList::prettyPrint() {
     for (int i = levels - 2; i >= 0; i--) {
         curr = head->next[i];
         cout << "Level " << i << ": ";
-        while (curr != NULL && curr->next[i] != NULL) { // Check for null pointer here
+        while (curr != NULL && curr->next[i] != NULL) 
+        { // Check for null pointer here
             string curr_director = curr->director;
             if (curr_director != prev_director) {
                 cout << curr_director << "\t";

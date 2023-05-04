@@ -1,5 +1,15 @@
 {
     "files.associations": {
-        "iostream": "cpp"
+        "new": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "*.tcc": "cpp",
+        "compare": "cpp",
+        "sstream": "cpp",
+        "type_traits": "cpp",
+        "iosfwd": "cpp"
+    },
+    "files.watcherExclude": {
+        "**/target": true
     }
 }

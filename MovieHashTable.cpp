@@ -26,17 +26,19 @@ MovieHashTable::MovieHashTable(int s) {
 // Destructor for MovieHashTable that deletes all nodes in the hash table
 MovieHashTable::~MovieHashTable() {
     // TODO
-    MovieNode* curr;
-    MovieNode* prev;
-    for (int i = 0; i < table_size; i++) {
-        curr = table[i];
-        while (curr != nullptr) {
-          prev = curr;
-          curr = curr -> next;
-          delete prev;
-        }
-        table[i]= NULL;
+      MovieNode * curr;
+    MovieNode * prev; 
+    for(int i = 0; i < table_size; i++)
+    {
+       curr = table[i];
+       while(curr!= NULL)
+       {
+           prev = curr;
+           curr = curr->next;
+           delete prev;
+       }
     }
+    delete[] table; 
 }
 
 // Hash function for MovieHashTable that returns an index in the hash table for a given movie title.
@@ -72,8 +74,8 @@ void MovieHashTable::insert(string title, MovieNode* movie) {
             curr = curr->next;
 
         movie->title = title; // Set the title of the new MovieNode
+        movie -> next = curr -> next;
         curr->next = movie;
-        n_collisions++; // Increment collision count
     }
 }
 // Searches for a node in the hash table with the specified title
@@ -101,12 +103,10 @@ int MovieHashTable::getCollisions() {
         int num_nodes = 0;
         MovieNode* curr = table[i];
         while (curr != nullptr) {
-            num_nodes++;
             curr = curr->next;
+            num_nodes++;
         }
-        if (num_nodes > 1) {
-            num_collisions += num_nodes - 1;
-        }
+        num_collisions = num_nodes;
     }
     return num_collisions;
 
